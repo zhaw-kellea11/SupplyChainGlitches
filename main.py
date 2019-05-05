@@ -1,22 +1,37 @@
-from glitchData import GlitchData, Companies
+from glitchData import Companies
 from stockData import quandl_data, StockData
-from analytics import abnormal_analytics, abnormal_analytics_pct
+from analytics import abnormal_analytics
 
 
 def main():
     print('Initializing')
-    companies = Companies()
+    fn_glitches = 'data/Glitches_all.xlsx'
+    companies = Companies(fn_glitches=fn_glitches)
     stocks = StockData()
 
     n_rand = 10
     # companies_random = [Companies(randomized=companies) for _ in range(n_rand)]
 
     print('Building Event windows...')
-    windows = stocks.extractWindows(companies.glitches)
+    windows, glitches = stocks.extractWindows(companies.glitches)
     print('Calculating abnormal returns...')
     abnormal_returns = stocks.abnormal_return(windows)
 
-    abnormal_analytics(abnormal_returns)
+    # abnormal_analytics(abnormal_returns)
+
+    categories = ['Sector', 'Ursache', 'Grund (Art der Störung)', 'Verantwortlich (Quelle)']
+    for cat in categories:
+        values = set([g[cat] for g in glitches])
+        values = {v: [] for v in values}
+        print(values)
+        for i, g in enumerate(glitches):
+            values[g[cat]].append(abnormal_returns[i])
+
+        for v, r in values.items():
+            fig_name = ('returns_' + cat + '_' + v + '.pdf').replace('/', '-')
+            fig_title = 'Abnormal returns around glitch event (' + cat + ': ' + v + ')'
+            abnormal_analytics(r, fig_name, fig_title)
+
 
 
 

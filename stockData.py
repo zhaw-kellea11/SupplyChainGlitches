@@ -71,6 +71,7 @@ class StockData:
 
     def extractWindows(self, filter, window=40):
         windows = []
+        glitches = []
         for index, glitch in filter.iterrows():
             try:
                 stock_data = self.ticker2data(glitch['Trading'])
@@ -98,32 +99,8 @@ class StockData:
             isna = window_data.isnull().values.any()
             if not isna:
                 windows.append(window_data)
-        return windows
-
-    def abnormal_return_pct(self, windows):
-        abnormal_returns = []
-        for window in windows[:]:
-            ticker = list(window.columns)[-1]
-            event_dates = list(window['Date'])
-            stock_data = self.ticker2data(ticker)
-            max_date = max(window['Date'])
-
-            stock_history = stock_data[(stock_data['Date'] <= max_date)].dropna(how='any')
-            stock_history = stock_history.iloc[-21:, 1]
-            stock_history_pct = stock_history.pct_change()
-            shp_array = np.array(stock_history_pct)[1:]
-            m1 = np.median(shp_array[:10])
-            s1 = np.std(shp_array[:10])
-
-            m2 = np.median(shp_array[10:15])
-            s2 = np.std(shp_array[10:15])
-
-            m3 = np.median(shp_array[15:])
-            s3 = np.std(shp_array[15:])
-
-            package = [[m1, m2, m3], [s1, s2, s3]]
-            abnormal_returns.append(package)
-        return abnormal_returns
+                glitches.append(glitch)
+        return windows, glitches
 
     def abnormal_return(self, windows):
         abnormal_returns = []

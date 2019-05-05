@@ -14,9 +14,11 @@ class GlitchData:
 
         print(self.glitches)
 
+        raise NotImplementedError
+
 
 class Companies:
-    def __init__(self, fn='data/data.xlsx', randomized=False):
+    def __init__(self, fn_mapping='data/data.xlsx', fn_glitches='data/data.xlsx', randomized=False):
         if not randomized:
             excluded_categories = ['Banks',
                                    'Financial Services',
@@ -25,17 +27,20 @@ class Companies:
                                    'Software',
                                    'Telecommunication']
 
-            self.prime = pd.read_excel(fn, sheet_name='Prime Standard', header=7)
+            self.prime = pd.read_excel(fn_mapping, sheet_name='Prime Standard', header=7)
             self.prime = self.prime[~self.prime['Sector'].isin(excluded_categories)]
-            self.general = pd.read_excel(fn, sheet_name='General Standard', header=7)
+            self.general = pd.read_excel(fn_mapping, sheet_name='General Standard', header=7)
             self.general = self.general[~self.general['Sector'].isin(excluded_categories)]
 
             self.tickers_prime = list(self.prime['Trading Symbol'].unique())
             self.tickers_general = list(self.general['Trading Symbol'].unique())
             self.tickers_general = [t for t in self.tickers_general if t != 'n.a']
 
-            self.glitches = pd.read_excel(fn, sheet_name='Störungen', header=2)
-            self.glitches = self.glitches.dropna(subset=['Relevant?'])
+            self.glitches = pd.read_excel(fn_glitches, sheet_name='Störungen', header=2)
+            try:
+                self.glitches = self.glitches.dropna(subset=['Relevant?'])
+            except KeyError:
+                pass
 
             self.glitches = self.glitches[(self.glitches['Datum'] >= '2007-03-01')
                                           & (self.glitches['Datum'] <= '2018-10-01')]
