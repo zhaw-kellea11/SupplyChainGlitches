@@ -2,8 +2,6 @@ import quandl
 import datetime
 import numpy as np
 import pandas as pd
-from pandas.tseries.offsets import BDay
-import sys
 
 from sklearn import linear_model
 from scipy import stats
@@ -111,22 +109,13 @@ class StockData:
             stock_data = self.ticker2data(ticker)
 
             max_date = event_date - datetime.timedelta(days=10)
-
-            # max_date = max(window['Date']) + datetime.timedelta(days=100)
-            #independent_stock_history = stock_data[(~stock_data['Date'].isin(
-            #    event_dates)) & (stock_data['Date'] <= max_date)].dropna(how='any')
             independent_stock_history = stock_data[(stock_data['Date'] <= max_date)].dropna(how='any')
-
             min_date = min(independent_stock_history['Date'])
 
             event_cdax = self.cdax[self.cdax['Date'].isin(event_dates)]
 
-            # independent_cdax_history = self.cdax[~self.cdax['Date'].isin(event_dates)]
             independent_cdax_history = self.cdax[(
                 self.cdax['Date'] >= min_date) & (self.cdax['Date'] <= max_date)]
-
-            #self.stock_array = np.array(independent_stock_history.iloc[:, 1])[-200:]
-            #self.cdax_array = np.array(independent_cdax_history.iloc[:, 1])[-200:]
 
             self.stock_array = np.array(independent_stock_history.iloc[:, 1])[:]
             self.cdax_array = np.array(independent_cdax_history.iloc[:, 1])[:]
@@ -142,8 +131,6 @@ class StockData:
             # Calculate Residuals (delta-dof is 2, one for each fitted param)
             residuals = fitted - self.stock_array
             residuals_std = residuals.std(ddof=2)
-
-            variances = residuals_std**2
 
             # Calculate variances
             variances = residuals_std**2 * np.linalg.inv(np.dot(self.design_matrix.T, self.design_matrix))
@@ -166,11 +153,6 @@ class StockData:
             expected_return = intercept + beta * cdax_event_price
             abnormal_return = stock_event_price - expected_return
 
-            #abnormal_return_rel = stock_event_price / expected_return - 1
-            #abnormal_return_rel = np.array(pd.DataFrame(abnormal_return).pct_change())[1:]
-
-            # print(abnormal_return_rel)
-            # self.printModel(model)
             package = [abnormal_return, ticker, event_dates, model]
             abnormal_returns.append(package)
         return abnormal_returns
@@ -180,14 +162,6 @@ class StockData:
 
     @staticmethod
     def printModel(model):
-        """ Print model parameters and statistics
-
-        statistics and parameters are printed to console
-
-        Args:
-            model (np.array(float)): model data of the regression
-
-        """
         print()
         print('--- Coefficients ---')
         print('Beta:', round(model[0][1], 3))

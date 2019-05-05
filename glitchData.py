@@ -3,20 +3,6 @@ import random as rand
 rand.seed()
 
 
-class GlitchData:
-    def __init__(self, fn='data/data.xlsx'):
-        self.data = pd.read_excel(fn, sheet_name='Störungen', header=2)
-        self.tickers = list(self.data['Trading'].unique())
-
-        self.glitches = {}
-        for tick in self.tickers:
-            self.glitches[tick] = self.data[self.data['Trading'] == tick]['Datum'].to_list()
-
-        print(self.glitches)
-
-        raise NotImplementedError
-
-
 class Companies:
     def __init__(self, fn_mapping='data/data.xlsx', fn_glitches='data/data.xlsx', randomized=False):
         if not randomized:
@@ -55,7 +41,6 @@ class Companies:
 
             self.glitches_rand = pd.DataFrame(glitches_rand_list, columns=['Datum', 'Trading'])
             self.glitches = self.glitches_rand
-        # self.tickers = self.tickers_prime + self.tickers_general
 
     def random_dates(self, start, end, n=1):
         start_u = start.value // 10**9
