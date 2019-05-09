@@ -1,0 +1,210 @@
+Initializing
+Building Event windows...
+Calculating abnormal returns...
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sklearn/linear_model/base.py:509: RuntimeWarning: internal gelsd driver lwork query error, required iwork dimension not returned. This is likely the result of LAPACK bug 0038, fixed in LAPACK 3.2.2 (released July 21, 2010). Falling back to 'gelss' driver.
+  linalg.lstsq(X, y)
+****************************************************************************************************
+Abnormal returns around glitch event
+CAR -5/5: -0.16
+CAR -1/0: -0.48
+{-5: 0.09, -4: 0.2, -3: 0.1, -2: 0.1, -1: -0.1, 0: -0.37, 1: 0.05, 2: -0.07, 3: -0.17, 4: 0.09, 5: -0.08}
+{'Automobile': [], 'Chemicals': [], 'Basic Resources': [], 'Industrial': [], 'Transportation & Logistics': [], 'Retail': [], 'Utilities': [], 'Consumer': [], 'Technology': [], 'Pharma & Healthcare': [], 'Construction': []}
+****************************************************************************************************
+Abnormal returns around glitch event (Sector: Automobile)
+CAR -5/5: -0.94
+CAR -1/0: -0.4
+{-5: 0.19, -4: 0.25, -3: -0.03, -2: 0.04, -1: 0.12, 0: -0.53, 1: -0.23, 2: -0.22, 3: -0.2, 4: -0.32, 5: -0.01}
+****************************************************************************************************
+Abnormal returns around glitch event (Sector: Chemicals)
+CAR -5/5: -0.23
+CAR -1/0: -0.07
+{-5: 0.13, -4: 0.19, -3: 0.17, -2: -0.34, -1: 0.15, 0: -0.22, 1: -0.05, 2: -0.09, 3: -0.06, 4: 0.11, 5: -0.22}
+****************************************************************************************************
+Abnormal returns around glitch event (Sector: Basic Resources)
+CAR -5/5: 1.0
+CAR -1/0: -0.68
+{-5: -1.62, -4: -1.15, -3: 0.4, -2: -0.08, -1: -0.13, 0: -0.55, 1: 0.03, 2: -0.46, 3: 1.98, 4: 1.56, 5: 1.03}
+****************************************************************************************************
+Abnormal returns around glitch event (Sector: Industrial)
+CAR -5/5: 1.4
+CAR -1/0: -0.28
+{-5: 0.59, -4: 0.54, -3: 0.01, -2: 0.63, -1: 0.11, 0: -0.39, 1: -0.02, 2: -0.01, 3: -0.2, 4: 0.27, 5: -0.13}
+****************************************************************************************************
+Abnormal returns around glitch event (Sector: Transportation & Logistics)
+CAR -5/5: -0.33
+CAR -1/0: -0.41
+{-5: -0.41, -4: 0.3, -3: -0.08, -2: -0.32, -1: -0.35, 0: -0.06, 1: 0.68, 2: -0.1, 3: -0.23, 4: 0.25, 5: -0.02}
+****************************************************************************************************
+Abnormal returns around glitch event (Sector: Retail)
+CAR -5/5: -0.4
+CAR -1/0: 0.2
+{-5: 0.58, -4: -1.54, -3: 0.23, -2: 0.23, -1: 0.24, 0: -0.04, 1: -0.12, 2: -0.33, 3: 0.45, 4: -0.14, 5: 0.04}
+****************************************************************************************************
+Abnormal returns around glitch event (Sector: Utilities)
+CAR -5/5: -1.77
+CAR -1/0: -0.24
+{-5: 0.25, -4: -1.37, -3: 1.34, -2: -1.8, -1: -0.81, 0: 0.57, 1: -0.47, 2: 0.13, 3: 0.78, 4: -0.57, 5: 0.18}
+****************************************************************************************************
+Abnormal returns around glitch event (Sector: Consumer)
+CAR -5/5: -2.45
+CAR -1/0: -1.27
+{-5: -1.08, -4: 0.04, -3: -0.19, -2: 0.13, -1: 0.01, 0: -1.28, 1: 1.42, 2: -0.27, 3: -0.76, 4: -0.08, 5: -0.38}
+****************************************************************************************************
+Abnormal returns around glitch event (Sector: Technology)
+CAR -5/5: -2.64
+CAR -1/0: -9.29
+{-5: -2.27, -4: -0.04, -3: 4.21, -2: 4.07, -1: -8.17, 0: -1.13, 1: -1.11, 2: 5.82, 3: -5.18, 4: 2.52, 5: -1.36}
+****************************************************************************************************
+Abnormal returns around glitch event (Sector: Pharma & Healthcare)
+CAR -5/5: -0.16
+CAR -1/0: -1.64
+{-5: 0.67, -4: 1.0, -3: -0.29, -2: 0.77, -1: -0.44, 0: -1.2, 1: 0.46, 2: 0.02, 3: -1.02, 4: 0.68, 5: -0.82}
+****************************************************************************************************
+Abnormal returns around glitch event (Sector: Construction)
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/numpy/core/_methods.py:140: RuntimeWarning: Degrees of freedom <= 0 for slice
+  keepdims=keepdims)
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/numpy/core/_methods.py:130: RuntimeWarning: invalid value encountered in true_divide
+  ret, rcount, out=ret, casting='unsafe', subok=False)
+CAR -5/5: 1.46
+CAR -1/0: -1.89
+{-5: -0.07, -4: -0.12, -3: 1.64, -2: 1.95, -1: -2.52, 0: 0.63, 1: -1.4, 2: -0.82, 3: 1.59, 4: 0.82, 5: -0.25}
+{'Umwelt': [], 'Organisation': [], 'Netzwerk': []}
+****************************************************************************************************
+Abnormal returns around glitch event (Ursache: Umwelt)
+CAR -5/5: -1.08
+CAR -1/0: -0.44
+{-5: 0.0, -4: 0.04, -3: -0.07, -2: -0.4, -1: -0.15, 0: -0.29, 1: -0.03, 2: -0.09, 3: 0.02, 4: -0.12, 5: 0.02}
+****************************************************************************************************
+Abnormal returns around glitch event (Ursache: Organisation)
+CAR -5/5: 1.57
+CAR -1/0: -0.2
+{-5: 0.65, -4: 0.74, -3: -0.0, -2: 0.62, -1: 0.33, 0: -0.53, 1: 0.25, 2: -0.2, 3: -0.06, 4: 0.1, 5: -0.34}
+****************************************************************************************************
+Abnormal returns around glitch event (Ursache: Netzwerk)
+CAR -5/5: -0.43
+CAR -1/0: -0.61
+{-5: -0.11, -4: 0.06, -3: 0.23, -2: 0.13, -1: -0.26, 0: -0.35, 1: 0.01, 2: 0.0, 3: -0.3, 4: 0.19, 5: -0.03}
+{'Entwicklungs- und Konstruktionsänderungen': [], 'Genehmigungsverzögerungen': [], 'Kapazitäts- und Ausstattungsprobleme': [], 'schlechte Prognose': [], 'Naturereignisse': [], 'Explosion/Brand': [], 'Produktionsprobleme': [], 'IT Probleme': [], 'Teilemangel': [], 'Qualitätsprobleme': [], 'Verstärkung und Rollout Probleme': [], 'Arbeitnehmer Streitigkeiten': [], 'Projekt- und Programmverzögerungen': [], 'Politische Gründe': [], 'Infrastruktur, Anlagenausfall': [], 'Produktrückrufe': []}
+****************************************************************************************************
+Abnormal returns around glitch event (Grund (Art der Störung): Entwicklungs- und Konstruktionsänderungen)
+CAR -5/5: 5.22
+CAR -1/0: 0.57
+{-5: 0.5, -4: 1.11, -3: 0.09, -2: -0.19, -1: -0.21, 0: 0.78, 1: 1.55, 2: 0.14, 3: 0.48, 4: 0.42, 5: 0.53}
+****************************************************************************************************
+Abnormal returns around glitch event (Grund (Art der Störung): Genehmigungsverzögerungen)
+CAR -5/5: -4.96
+CAR -1/0: -2.37
+{-5: -0.67, -4: 0.51, -3: 0.71, -2: -0.11, -1: -0.99, 0: -1.38, 1: 0.03, 2: 0.26, 3: 0.08, 4: -2.16, 5: -1.24}
+****************************************************************************************************
+Abnormal returns around glitch event (Grund (Art der Störung): Kapazitäts- und Ausstattungsprobleme)
+CAR -5/5: 1.94
+CAR -1/0: -0.63
+{-5: -0.75, -4: 0.73, -3: 0.32, -2: 0.68, -1: 0.57, 0: -1.2, 1: 0.3, 2: 0.35, 3: 1.01, 4: 0.06, 5: -0.11}
+****************************************************************************************************
+Abnormal returns around glitch event (Grund (Art der Störung): schlechte Prognose)
+CAR -5/5: -1.55
+CAR -1/0: -1.61
+{-5: -1.78, -4: 0.88, -3: -0.43, -2: 1.69, -1: -0.8, 0: -0.8, 1: 0.92, 2: 0.85, 3: -0.36, 4: -1.35, 5: -0.35}
+****************************************************************************************************
+Abnormal returns around glitch event (Grund (Art der Störung): Naturereignisse)
+CAR -5/5: -0.92
+CAR -1/0: 0.0
+{-5: 0.1, -4: -0.06, -3: -0.09, -2: -0.48, -1: -0.24, 0: 0.24, 1: -0.1, 2: -0.2, 3: -0.11, 4: 0.06, 5: -0.02}
+****************************************************************************************************
+Abnormal returns around glitch event (Grund (Art der Störung): Explosion/Brand)
+CAR -5/5: -1.47
+CAR -1/0: -0.74
+{-5: 0.15, -4: -0.03, -3: -0.55, -2: 0.0, -1: -0.16, 0: -0.58, 1: -0.08, 2: -0.95, 3: 0.39, 4: -0.23, 5: 0.57}
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/matplotlib/pyplot.py:537: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  max_open_warning, RuntimeWarning)
+****************************************************************************************************
+Abnormal returns around glitch event (Grund (Art der Störung): Produktionsprobleme)
+CAR -5/5: -1.62
+CAR -1/0: -2.56
+{-5: 0.37, -4: -0.38, -3: 0.2, -2: 0.49, -1: -0.83, 0: -1.73, 1: 1.43, 2: -0.17, 3: -0.87, 4: -0.09, 5: -0.04}
+****************************************************************************************************
+Abnormal returns around glitch event (Grund (Art der Störung): IT Probleme)
+CAR -5/5: -0.96
+CAR -1/0: 0.23
+{-5: 0.34, -4: 0.18, -3: 0.3, -2: 0.1, -1: -0.39, 0: 0.63, 1: -0.73, 2: -0.06, 3: 0.34, 4: -1.65, 5: -0.02}
+****************************************************************************************************
+Abnormal returns around glitch event (Grund (Art der Störung): Teilemangel)
+CAR -5/5: -0.52
+CAR -1/0: -0.17
+{-5: -0.18, -4: -0.59, -3: -0.29, -2: 0.63, -1: -0.07, 0: -0.1, 1: -0.91, 2: 0.77, 3: -0.12, 4: 0.31, 5: 0.02}
+****************************************************************************************************
+Abnormal returns around glitch event (Grund (Art der Störung): Qualitätsprobleme)
+CAR -5/5: 0.4
+CAR -1/0: -1.54
+{-5: 0.38, -4: 0.89, -3: 0.83, -2: -0.01, -1: -0.49, 0: -1.04, 1: -0.01, 2: -0.42, 3: -0.12, 4: 0.3, 5: 0.09}
+****************************************************************************************************
+Abnormal returns around glitch event (Grund (Art der Störung): Verstärkung und Rollout Probleme)
+CAR -5/5: 7.59
+CAR -1/0: 4.83
+{-5: -0.4, -4: 0.17, -3: 1.73, -2: 0.66, -1: 1.36, 0: 3.48, 1: 0.5, 2: -2.28, 3: 0.47, 4: 1.94, 5: -0.04}
+****************************************************************************************************
+Abnormal returns around glitch event (Grund (Art der Störung): Arbeitnehmer Streitigkeiten)
+CAR -5/5: 0.73
+CAR -1/0: -0.27
+{-5: 0.1, -4: 0.83, -3: 0.26, -2: -0.07, -1: 0.23, 0: -0.5, 1: 0.32, 2: -0.03, 3: -0.3, 4: 0.21, 5: -0.33}
+****************************************************************************************************
+Abnormal returns around glitch event (Grund (Art der Störung): Projekt- und Programmverzögerungen)
+CAR -5/5: 9.36
+CAR -1/0: 2.7
+{-5: 1.89, -4: 3.61, -3: 1.33, -2: 0.58, -1: 0.7, 0: 2.0, 1: -0.82, 2: 1.26, 3: -3.51, 4: 2.74, 5: -0.42}
+****************************************************************************************************
+Abnormal returns around glitch event (Grund (Art der Störung): Politische Gründe)
+CAR -5/5: -0.72
+CAR -1/0: -0.48
+{-5: -0.21, -4: -0.21, -3: 1.19, -2: -0.8, -1: -0.49, 0: 0.0, 1: 0.05, 2: -0.47, 3: -0.03, 4: 0.08, 5: 0.15}
+****************************************************************************************************
+Abnormal returns around glitch event (Grund (Art der Störung): Infrastruktur, Anlagenausfall)
+CAR -5/5: -0.06
+CAR -1/0: -0.72
+{-5: 0.13, -4: 0.26, -3: -0.35, -2: 0.9, -1: 0.21, 0: -0.93, 1: 0.8, 2: -0.52, 3: 0.06, 4: 0.17, 5: -0.8}
+****************************************************************************************************
+Abnormal returns around glitch event (Grund (Art der Störung): Produktrückrufe)
+CAR -5/5: -2.04
+CAR -1/0: -1.27
+{-5: 1.3, -4: 0.04, -3: -0.38, -2: 1.13, -1: -0.59, 0: -0.68, 1: -0.62, 2: 0.48, 3: -1.34, 4: -1.2, 5: -0.18}
+{'Intern und andere': [], 'Intern und Lieferant (upstream)': [], 'Lieferanten': [], 'Natur': [], 'Andere': [], 'Intern und Kunde (downstream)': [], 'Sonstige - Behörden,Regulatorien': [], 'Intern (Company)': []}
+****************************************************************************************************
+Abnormal returns around glitch event (Verantwortlich (Quelle): Intern und andere)
+CAR -5/5: 2.02
+CAR -1/0: -0.36
+{-5: 0.62, -4: 0.86, -3: 0.38, -2: 0.16, -1: 0.11, 0: -0.47, 1: 0.56, 2: 0.23, 3: -0.52, 4: 0.29, 5: -0.2}
+****************************************************************************************************
+Abnormal returns around glitch event (Verantwortlich (Quelle): Intern und Lieferant (upstream))
+CAR -5/5: 0.77
+CAR -1/0: 0.06
+{-5: -0.49, -4: 0.18, -3: -0.36, -2: 0.42, -1: 0.27, 0: -0.21, 1: 0.44, 2: 0.47, 3: 0.05, 4: 0.29, 5: -0.29}
+****************************************************************************************************
+Abnormal returns around glitch event (Verantwortlich (Quelle): Lieferanten)
+CAR -5/5: -0.85
+CAR -1/0: -0.7
+{-5: -0.2, -4: -0.39, -3: -0.11, -2: 0.44, -1: -0.51, 0: -0.19, 1: -0.41, 2: 0.34, 3: -0.4, 4: 0.25, 5: 0.33}
+****************************************************************************************************
+Abnormal returns around glitch event (Verantwortlich (Quelle): Natur)
+CAR -5/5: -0.9
+CAR -1/0: 0.04
+{-5: 0.04, -4: -0.17, -3: -0.13, -2: -0.34, -1: -0.12, 0: 0.16, 1: -0.25, 2: -0.02, 3: -0.14, 4: 0.07, 5: 0.01}
+****************************************************************************************************
+Abnormal returns around glitch event (Verantwortlich (Quelle): Andere)
+CAR -5/5: -2.2
+CAR -1/0: -0.42
+{-5: -0.12, -4: 0.17, -3: 0.05, -2: -0.35, -1: -0.35, 0: -0.07, 1: 0.05, 2: -0.93, 3: -0.27, 4: -0.33, 5: -0.05}
+****************************************************************************************************
+Abnormal returns around glitch event (Verantwortlich (Quelle): Intern und Kunde (downstream))
+CAR -5/5: 4.46
+CAR -1/0: -1.67
+{-5: 0.72, -4: -0.57, -3: 1.9, -2: -0.08, -1: -1.25, 0: -0.42, 1: 0.45, 2: 0.39, 3: 2.64, 4: 1.74, 5: -1.06}
+****************************************************************************************************
+Abnormal returns around glitch event (Verantwortlich (Quelle): Sonstige - Behörden,Regulatorien)
+CAR -5/5: 2.18
+CAR -1/0: -0.61
+{-5: 1.12, -4: 1.33, -3: 0.95, -2: -0.6, -1: -0.17, 0: -0.44, 1: 0.47, 2: 0.12, 3: -0.2, 4: 0.03, 5: -0.45}
+****************************************************************************************************
+Abnormal returns around glitch event (Verantwortlich (Quelle): Intern (Company))
+CAR -5/5: -0.92
+CAR -1/0: -0.95
+{-5: -0.21, -4: 0.12, -3: 0.05, -2: 0.5, -1: 0.05, 0: -1.01, 1: -0.01, 2: -0.39, 3: 0.2, 4: -0.04, 5: -0.17}

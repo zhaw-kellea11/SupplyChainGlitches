@@ -31,6 +31,10 @@ def abnormal_analytics(abnormal_returns, fig_name='returns.pdf', fig_title='Abno
 
     print('CAR -5/5:', round(car_11, 2))
     print('CAR -1/0:', round(car_2, 2))
+    ar_dict = {}
+    for i in range(-5,6):
+        ar_dict[i] = round(mean_return_days[event_index-5:event_index+6][i+5],2)
+    print(ar_dict)
 
     fig = plt.figure(figsize=(10,5))
     ax = fig.add_subplot(111)
@@ -39,6 +43,7 @@ def abnormal_analytics(abnormal_returns, fig_name='returns.pdf', fig_title='Abno
     ax.plot(lower, color=plt.cm.viridis(0.7))
     ax.plot(upper, color=plt.cm.viridis(0.7))
     ax.axvline(x=event_index, color=plt.cm.inferno(0.4), lw=0.5)
+    ax.axhline(y=0, color=plt.cm.inferno(0.4), lw=0.5)
     ax.set_xticks(range(0,n_days,5))
     ax.set_xticklabels(time_axis[::5])
 
